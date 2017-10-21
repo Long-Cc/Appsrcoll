@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    CGFloat maxY = CGRectGetMaxY(self.lastImage.frame);
+    self.scrollView.contentSize = CGSizeMake(0, maxY);
+    self.scrollView.contentOffset = CGPointMake(0, -60);
+    self.scrollView.contentInset = UIEdgeInsetsMake(60, 0, 70, 0);
 }
 
 
